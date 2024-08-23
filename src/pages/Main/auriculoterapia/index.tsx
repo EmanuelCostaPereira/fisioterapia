@@ -6,9 +6,9 @@ export default function AuriculoterapiaPage() {
     <Container>
       <Title>Auriculoterapia</Title>
       <Description>
-        A Auriculoterapia é uma prática terapêutica da medicina tradicional chinesa
-        que envolve a inserção de agulhas finas em pontos específicos do corpo
-        para promover o equilíbrio energético, aliviar a dor e melhorar o bem-estar geral.
+      Auriculoterapia é uma técnica terapêutica baseada na estimulação de pontos específicos na orelha para tratar uma variedade de condições de saúde. Originária da medicina tradicional chinesa e também popularizada na França no século XX pelo Dr. Paul Nogier, a auriculoterapia se fundamenta na ideia de que a orelha é um microcosmo do corpo humano, onde cada ponto corresponde a uma parte específica do corpo ou a um sistema orgânico.
+
+Durante uma sessão de auriculoterapia, o terapeuta identifica pontos sensíveis ou reativos na orelha e os estimula usando pequenas agulhas, sementes, esferas metálicas, ou dispositivos de pressão. A estimulação desses pontos visa equilibrar a energia no corpo, aliviar a dor, reduzir o estresse, e promover o bem-estar geral.
       </Description>
     </Container>
   );

@@ -1,29 +1,32 @@
 import React from 'react';
 import { Container, StyledImage, ButtonWrapper, ButtonGroup, Button, Title, ButtonContact, Link as StyledLink } from './styles';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import headImg from '../../assets/logo1.png';
 
 export function Header() {
+  const location = useLocation();
+
   return (
     <Container> 
+      {/* Adiciona a classe "active" quando estiver na página inicial */}
       <Link to="/">
-        <StyledImage src={headImg} alt="Header Image" />
+        <StyledImage src={headImg} alt="Header Image" className={location.pathname === "/" ? "active" : ""} />
       </Link>
       <ButtonWrapper>
         <div>
           <Title>Tratamentos</Title>
           <ButtonGroup>
             <Link to="/acupuntura">
-              <Button>Acupuntura</Button>
-            </Link>
-            <Link to="/ventosa">
-            <Button>Ventosas</Button>
-            </Link>
-            <Link to="/liberacao">
-            <Button>Liberação Miofascial</Button>
+              <Button className={location.pathname === "/acupuntura" ? "active" : ""}>Acupuntura</Button>
             </Link>
             <Link to="/auriculoterapia">
-            <Button>Auriculoterapia</Button>
+              <Button className={location.pathname === "/auriculoterapia" ? "active" : ""}>Auriculoterapia</Button>
+            </Link>
+            <Link to="/liberacao">
+              <Button className={location.pathname === "/liberacao" ? "active" : ""}>Liberação Miofascial</Button>
+            </Link>
+            <Link to="/ventosa">
+              <Button className={location.pathname === "/ventosa" ? "active" : ""}>Ventosas</Button>
             </Link>
           </ButtonGroup>
         </div>
