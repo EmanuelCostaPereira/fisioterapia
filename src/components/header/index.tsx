@@ -1,31 +1,42 @@
 import React from 'react';
-import { Container, StyledImage, ButtonWrapper, ButtonGroup, Button, Title, ButtonContact, Link } from './styles';
-import headImg from '../../assets/logo 1.png';
+import { Container, StyledImage, ButtonWrapper, ButtonGroup, Button, Title, ButtonContact, Link as StyledLink } from './styles';
+import { Link } from 'react-router-dom';
+import headImg from '../../assets/logo1.png';
 
 export function Header() {
   return (
-    <Container>
-      <StyledImage src={headImg} alt="Header Image" />
+    <Container> 
+      <Link to="/">
+        <StyledImage src={headImg} alt="Header Image" />
+      </Link>
       <ButtonWrapper>
         <div>
           <Title>Tratamentos</Title>
           <ButtonGroup>
-            <Button>Acupuntura</Button>
+            <Link to="/acupuntura">
+              <Button>Acupuntura</Button>
+            </Link>
+            <Link to="/ventosa">
             <Button>Ventosas</Button>
+            </Link>
+            <Link to="/liberacao">
             <Button>Liberação Miofascial</Button>
+            </Link>
+            <Link to="/auriculoterapia">
             <Button>Auriculoterapia</Button>
+            </Link>
           </ButtonGroup>
         </div>
       </ButtonWrapper>
       <ButtonContact>
         <Title>Contatos</Title>
         <ButtonGroup>
-          <Link href="https://www.instagram.com/drgustavoacupuntura/" target="_blank" rel="noopener noreferrer">
+          <StyledLink href="https://www.instagram.com/drgustavoacupuntura/" target="_blank" rel="noopener noreferrer">
             <Button>Instagram</Button>
-          </Link>
-          <Link href="https://wa.me/5551995920506?text=Ol%C3%A1%20Gustavo%2C%20vi%20o%20seu%20site%2C%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener noreferrer">
+          </StyledLink>
+          <StyledLink href="https://wa.me/5551995920506?text=Ol%C3%A1%20Gustavo%2C%20vi%20o%20seu%20site%2C%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener noreferrer">
             <Button>Whatsapp</Button>
-          </Link>
+          </StyledLink>
         </ButtonGroup>
       </ButtonContact>
     </Container>
