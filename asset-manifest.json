@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.js": "/fisioterapia/static/js/main.2f6124d8.js",
+    "static/js/453.c667dc28.chunk.js": "/fisioterapia/static/js/453.c667dc28.chunk.js",
+    "static/media/auriculoterapia.webp": "/fisioterapia/static/media/auriculoterapia.135145f48c843052d62d.webp",
+    "static/media/liberacao.webp": "/fisioterapia/static/media/liberacao.22b0319b07e45b6dae9c.webp",
+    "static/media/liberacao1.webp": "/fisioterapia/static/media/liberacao1.dd15bcfef0a3f6556e46.webp",
+    "static/media/ventosas.webp": "/fisioterapia/static/media/ventosas.bab30e1b9578deb6c335.webp",
+    "static/media/acupuntura1.webp": "/fisioterapia/static/media/acupuntura1.9cd9846ae928631bb3a2.webp",
+    "static/media/acupuntura.webp": "/fisioterapia/static/media/acupuntura.e330023827cc0f35a5e9.webp",
+    "static/media/auriculoterapia1.webp": "/fisioterapia/static/media/auriculoterapia1.42570c01deca3378973b.webp",
+    "static/media/logo1.png": "/fisioterapia/static/media/logo1.7c196aabe784ed4892ec.png",
+    "index.html": "/fisioterapia/index.html",
+    "main.2f6124d8.js.map": "/fisioterapia/static/js/main.2f6124d8.js.map",
+    "453.c667dc28.chunk.js.map": "/fisioterapia/static/js/453.c667dc28.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.2f6124d8.js"
+  ]
+}
