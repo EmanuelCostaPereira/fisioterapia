@@ -1,4 +1,10 @@
 import styled from 'styled-components';
+import { Link as RouterLink } from 'react-router-dom'; // Importa Link do react-router-dom
+
+// Define uma interface para as props
+interface MobileMenuProps {
+  isOpen: boolean;
+}
 
 export const Container = styled.div`
   height: 170px;
@@ -7,7 +13,13 @@ export const Container = styled.div`
   align-items: center;
   padding: 0 20px;
   border-radius: 0px 0px 15px 15px;
-  position: relative; /* Necessário para o posicionamento absoluto dos filhos */
+  position: relative;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 20px;
+  }
 `;
 
 export const StyledImage = styled.img`
@@ -21,28 +33,45 @@ export const StyledImage = styled.img`
   &.active {
     box-shadow: 0 0 0 3px ${({ theme }) => theme.colors.white};
   }
+
+  @media (max-width: 768px) {
+    height: 100px;
+    margin-bottom: 10px;
+  }
 `;
 
 export const ButtonWrapper = styled.div`
-  position: absolute; /* Permite posicionar o elemento onde quisermos dentro do contêiner pai */
-  top: 50%; /* Centraliza verticalmente */
-  left: 50%; /* Centraliza horizontalmente */
-  transform: translate(-50%, -50%); /* Ajusta o alinhamento central absoluto */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    position: static;
+    transform: none;
+    margin-bottom: 20px;
+  }
 `;
 
 export const ButtonContact = styled.div`
-  position: absolute; /* Permite posicionar o elemento na direita */
-  top: 50%; /* Centraliza verticalmente */
-  right: 20px; /* Afasta o elemento da direita do contêiner */
-  transform: translateY(-50%); /* Centraliza verticalmente o conteúdo */
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
   display: flex;
-  flex-direction: column; /* Empilha o título e os botões verticalmente */
-  align-items: center; /* Centraliza o conteúdo horizontalmente */
-  justify-content: center; /* Centraliza verticalmente o conteúdo */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    position: static;
+    transform: none;
+    margin-bottom: 20px;
+  }
 `;
 
 export const Title = styled.h2`
@@ -51,11 +80,20 @@ export const Title = styled.h2`
   font-size: 40px;
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
 `;
 
 export const ButtonGroup = styled.div`
   display: flex;
   gap: 10px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 10px; /* Espaçamento entre botões no modo mobile */
+  }
 `;
 
 export const Button = styled.button`
@@ -77,9 +115,45 @@ export const Button = styled.button`
     background-color: ${({ theme }) => theme.colors.white};
     color: ${({ theme }) => theme.colors.secondary};
   }
+
+  @media (max-width: 768px) {
+    width: 100%; /* Botões ocupam 100% da largura no mobile */
+  }
 `;
 
-export const Link = styled.a`
+export const StyledLink = styled.a`
   text-decoration: none;
   display: inline-block;
+`;
+
+export const Hamburger = styled.div`
+  display: none;
+  cursor: pointer;
+  font-size: 30px;
+  color: ${({ theme }) => theme.colors.white};
+
+  @media (max-width: 768px) {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+`;
+
+export const MobileMenu = styled.div<MobileMenuProps>`
+  display: flex; /* Mantém display flex em telas maiores */
+  width: 100%;
+
+  @media (max-width: 768px) {
+    display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
+  }
+`;
+
+// Adicionando o StyledLink para estilizar o Link do react-router-dom
+export const Link = styled(RouterLink)`
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    text-decoration: underline;
+  }
 `;
