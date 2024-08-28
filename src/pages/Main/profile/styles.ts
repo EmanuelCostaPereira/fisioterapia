@@ -20,6 +20,5 @@ export const Description = styled.p`
   color: #555;
   max-width: 700px;
   line-height: 1.5;
-  text-align: justify;
 
 `;

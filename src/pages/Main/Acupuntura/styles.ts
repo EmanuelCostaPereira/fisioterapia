@@ -23,7 +23,7 @@ export const SubTitle = styled.h2`
 
 export const Description = styled.p`
   font-size: 1rem;
-  text-align: justify;
+  text-align: center;
   color: #555;
   max-width: 700px;
   line-height: 1.6;
@@ -36,12 +36,23 @@ export const ContentWrapper = styled.div`
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap; /* Permite que o conteúdo se adapte em telas menores */
+
+  /* Media query para telas menores que 768px */
+  @media (max-width: 768px) {
+    flex-direction: column; /* Muda a direção para coluna para mostrar um elemento por linha */
+  }
 `;
 
 export const ImageWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &.primary-image {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
 `;
 
 export const AcupunctureImage = styled.img`
