@@ -1,6 +1,6 @@
 {
-  "short_name": "Aplicação React",
-  "name": "Templade Dev Samurai de aplicação React",
+  "short_name": "Gustavo Pereira",
+  "name": "Gustavo Pereira Fisioterapia, Acupuntura",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#F83600",
+  "theme_color": "#127DFF",
   "background_color": "#ffff"
 }
