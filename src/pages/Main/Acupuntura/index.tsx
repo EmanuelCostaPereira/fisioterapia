@@ -1,12 +1,11 @@
-import React from 'react';
-import { Container, Title, Description, ContentWrapper, SubTitle, AcupunctureImage, ImageWrapper } from './styles';
 import acupunctureImg1 from '../../../assets/acupuntura.webp'; // Certifique-se de ter a imagem no caminho correto
 import acupunctureImg2 from '../../../assets/acupuntura1.webp'; // Certifique-se de ter a imagem no caminho correto
+import { AcupunctureImage, Container, ContentWrapper, Description, ImageWrapper, SubTitle, Title } from './styles';
 
 export default function AcupunturaPage() {
   return (
     <Container>
-      <Title>Acupuntura</Title>
+      <Title>Acupunturaaaa</Title>
       <ContentWrapper>
         <ImageWrapper>
           <AcupunctureImage src={acupunctureImg1} alt="Imagem de Acupuntura" />
