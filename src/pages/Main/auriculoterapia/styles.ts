@@ -11,6 +11,10 @@ export const Title = styled.h1`
   font-size: 2rem;
   margin-bottom: 20px;
   color: #333;
+
+  @media (max-width: 1435px) {
+    text-align: left; /* Alinhamento à esquerda */
+  }
 `;
 
 export const SubTitle = styled.h2`
@@ -19,6 +23,10 @@ export const SubTitle = styled.h2`
   margin-bottom: 10px;
   color: #333;
   font-weight: bold;
+
+  @media (max-width: 1435px) {
+    text-align: left; /* Alinhamento à esquerda */
+  }
 `;
 
 export const Description = styled.p`
@@ -28,6 +36,10 @@ export const Description = styled.p`
   max-width: 700px;
   line-height: 1.6;
   margin: 0 20px; /* Adiciona margem ao redor do texto */
+
+  @media (max-width: 1435px) {
+    text-align: left; /* Alinhamento à esquerda */
+  }
 `;
 
 export const ContentWrapper = styled.div`
@@ -42,17 +54,17 @@ export const ImageWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   &.primary-image {
-    @media (max-width: 768px) {
+    @media (max-width: 1435px) {
       display: none;
     }
   }
 `;
 
-export const TherapyImage = styled.img`
-   width: 300px;
-   height: 600px;
+export const AuriculoterapiaImage = styled.img`
+  width: 300px;
+  height: 600px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 `;

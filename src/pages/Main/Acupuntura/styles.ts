@@ -11,6 +11,10 @@ export const Title = styled.h1`
   font-size: 2rem;
   margin-bottom: 20px;
   color: #333;
+
+  @media (max-width: 1435px) {
+    text-align: left; /* Alinhamento à esquerda */
+  }
 `;
 
 export const SubTitle = styled.h2`
@@ -19,6 +23,10 @@ export const SubTitle = styled.h2`
   margin-bottom: 10px;
   color: #333;
   font-weight: bold;
+
+  @media (max-width: 1435px) {
+    text-align: left; /* Alinhamento à esquerda */
+  }
 `;
 
 export const Description = styled.p`
@@ -28,6 +36,10 @@ export const Description = styled.p`
   max-width: 700px;
   line-height: 1.6;
   margin: 0 20px; /* Adiciona margem ao redor do texto */
+
+  @media (max-width: 1435px) {
+    text-align: left; /* Alinhamento à esquerda */
+  }
 `;
 
 export const ContentWrapper = styled.div`
@@ -36,11 +48,6 @@ export const ContentWrapper = styled.div`
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap; /* Permite que o conteúdo se adapte em telas menores */
-
-  /* Media query para telas menores que 768px */
-  @media (max-width: 768px) {
-    flex-direction: column; /* Muda a direção para coluna para mostrar um elemento por linha */
-  }
 `;
 
 export const ImageWrapper = styled.div`
@@ -49,7 +56,7 @@ export const ImageWrapper = styled.div`
   align-items: center;
 
   &.primary-image {
-    @media (max-width: 768px) {
+    @media (max-width: 1435px) {
       display: none;
     }
   }

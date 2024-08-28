@@ -1,5 +1,5 @@
-import styled from 'styled-components';
 import { Link as RouterLink } from 'react-router-dom'; // Importa Link do react-router-dom
+import styled from 'styled-components';
 
 // Define uma interface para as props
 interface MobileMenuProps {
@@ -15,7 +15,7 @@ export const Container = styled.div`
   border-radius: 0px 0px 15px 15px;
   position: relative;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1241px) {
     flex-direction: column;
     height: auto;
     padding: 10px 20px;
@@ -34,7 +34,7 @@ export const StyledImage = styled.img`
     box-shadow: 0 0 0 3px ${({ theme }) => theme.colors.white};
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1241px) {
     height: 100px;
     margin-bottom: 10px;
   }
@@ -50,7 +50,7 @@ export const ButtonWrapper = styled.div`
   align-items: center;
   justify-content: center;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1241px) {
     position: static;
     transform: none;
     margin-bottom: 20px;
@@ -67,7 +67,7 @@ export const ButtonContact = styled.div`
   align-items: center;
   justify-content: center;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1241px) {
     position: static;
     transform: none;
     margin-bottom: 20px;
@@ -81,7 +81,7 @@ export const Title = styled.h2`
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1241px) {
     font-size: 24px;
   }
 `;
@@ -90,7 +90,17 @@ export const ButtonGroup = styled.div`
   display: flex;
   gap: 10px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1241px) {
+    flex-direction: column;
+    gap: 10px; /* Espaçamento entre botões no modo mobile */
+  }
+`;
+
+export const ButtonGroupSocial = styled.div`
+  display: flex;
+  gap: 10px;
+
+  @media (max-width: 1241px) {
     flex-direction: column;
     gap: 10px; /* Espaçamento entre botões no modo mobile */
   }
@@ -112,14 +122,15 @@ export const Button = styled.button`
   }
 
   &.active {
-    background-color: ${({ theme }) => theme.colors.white};
+    background-color: ${({ theme }) => theme.colors.white}; /* Cor branca apenas quando ativo */
     color: ${({ theme }) => theme.colors.secondary};
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1241px) {
     width: 100%; /* Botões ocupam 100% da largura no mobile */
   }
 `;
+
 
 export const StyledLink = styled.a`
   text-decoration: none;
@@ -129,14 +140,14 @@ export const StyledLink = styled.a`
 export const Hamburger = styled.div`
   display: none;
   cursor: pointer;
-  font-size: 30px;
+  font-size: 40px;
   color: ${({ theme }) => theme.colors.white};
 
-  @media (max-width: 768px) {
+  @media (max-width: 1241px) {
     display: block;
     position: absolute;
-    right: 20px;
-    top: 20px;
+    right: 37px;
+    top: 37px;
   }
 `;
 
@@ -144,7 +155,7 @@ export const MobileMenu = styled.div<MobileMenuProps>`
   display: flex; /* Mantém display flex em telas maiores */
   width: 100%;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1241px) {
     display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
   }
 `;
